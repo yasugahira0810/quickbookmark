@@ -1,0 +1,21 @@
+{
+	"name": "quickbookmark-dev",
+	"dockerFile": "Dockerfile",
+	"forwardPorts": [8080],
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"dbaeumer.vscode-eslint",
+				"esbenp.prettier-vscode"
+			],
+			"settings": {}
+		}
+	},
+	"postCreateCommand": "npm install",
+	"postStartCommand": "npm run serve",
+	"build": {
+		"args": {
+			"VARIANT": "18"	
+		}
+	}
+}
